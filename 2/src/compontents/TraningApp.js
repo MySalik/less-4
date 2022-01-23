@@ -22,7 +22,7 @@ const TraningApp = () => {
     const EditObj = obj => {
         setTraining(prevTraining => prevTraining.map( item => {
             if (item.id == obj.id)
-                return {...prevTraining, date:obj.date, passed:obj.passed}
+                return {...item, date:obj.date, passed:obj.passed}
             return item
         }))
     }

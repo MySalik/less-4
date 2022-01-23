@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 
 const TraningForm = ({obj, onAdd, onEdit}) => {
     const [form, setForm] = useState(obj)
+
+    useEffect(() => {
+        setForm(obj);
+    }, [obj]);
 
     const handleNameChange = e => {
         const {name, value, type} = e.target
